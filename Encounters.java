@@ -71,6 +71,11 @@ public class Encounters {
             System.out.println("due to your incompetents in choosing a valid responce, you lose health.");//IS IT COOL LEAVING THIS?
             Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
          }
+         //Creating a 1second Timer
+         try{
+            Thread.sleep(1000);//2000ms = 2s
+         }catch(InterruptedException ex){}  //Yes you need these '{}' don't delete
+         
       //SIGNAL NEXT ROOM  
       }
 //==================================================Encounter 2====================================================================
@@ -109,6 +114,10 @@ public class Encounters {
             System.out.println("due to your incompetents in choosing a valid responce, you lose health.");//IS IT COOL LEAVING THIS?
             Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
          } 
+         //Creating a 1 second Timer
+         try{
+            Thread.sleep(1000);//2000ms = 2s
+         }catch(InterruptedException ex){}  //Yes you need these '{}' don't delete
       //SIGNAL NEXT ROOM  
       }
 //==============================================Encounter 3=================================================================
@@ -151,14 +160,39 @@ public class Encounters {
             System.out.println("due to your incompetents in choosing a valid responce, you lose health.");//IS IT COOL LEAVING THIS?
             Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
          } 
+         //Creating a 1 second Timer
+         try{
+            Thread.sleep(1000);//2000ms = 2s
+         }catch(InterruptedException ex){}  //Yes you need these '{}' don't delete
       //SIGNAL NEXT ROOM  
       }
 //=================================================Encounter 4=============================================================
       if(deciderEncounter ==4) {
-         System.out.println("");
-         System.out.println("");
-         System.out.println("");
-         System.out.println("");
+         System.out.println("The walls of this room are damp with blood. The blood drips from the ceiling, down the walls,");
+         System.out.println("over the furniture, and onto your shoes. In a blink, it is gone.");
+         //Choice Time
+         System.out.println("(1) Magic, shine some light in this bitch");//CHANGE THIS BEFORE TURNING IN!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+         System.out.println("(0) Use Sanity!");
+         
+         
+         if(choice ==1) {
+            if(Battle.getMagicDmg() > xx) {
+               System.out.println("light emerges from your chest. Go figure that's what would happen.");
+               System.out.println("You Can See! You come to the conclusion you were just seeing things");
+               //SINGAL NEXT ROOM
+            }
+            else {
+               System.out.println("Your chest glows slightly....");
+                  //Creating a 2 second Timer
+                  try{
+                     Thread.sleep(2000);//2000ms = 2s
+                  }catch(InterruptedException ex){}  //Yes you need these '{}' don't delete
+               System.out.println("....Creepy");
+            }
+         }
+         else{
+            System.out.println("Sanity? Really? Common. That doesn't exist in this game!");
+         }
       
       
       }
