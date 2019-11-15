@@ -4,9 +4,6 @@ Final Story Section
 */
 import java.util.Scanner;
 import java.util.Random;
-/*
-      
-*/
 
 public class Encounters {
    
@@ -21,7 +18,6 @@ public class Encounters {
 //       if(decider <= 4) {
 //          Stories();
 //       }
-//       
 //       if(decider >= 5) {
 //          Encounter();
 //       }
@@ -71,10 +67,10 @@ public class Encounters {
             System.out.println("due to your incompetents in choosing a valid responce, you lose health.");//IS IT COOL LEAVING THIS?
             Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
          }
-         //Creating a 1second Timer
-         try{
-            Thread.sleep(1000);//2000ms = 2s
-         }catch(InterruptedException ex){}  //Yes you need these '{}' don't delete
+            //Creating a 1second Timer
+            try{
+               Thread.sleep(1000);//2000ms = 2s
+            }catch(InterruptedException ex){}  //Yes you need these '{}' don't delete
          
       //SIGNAL NEXT ROOM  
       }
@@ -114,10 +110,10 @@ public class Encounters {
             System.out.println("due to your incompetents in choosing a valid responce, you lose health.");//IS IT COOL LEAVING THIS?
             Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
          } 
-         //Creating a 1 second Timer
-         try{
-            Thread.sleep(1000);//2000ms = 2s
-         }catch(InterruptedException ex){}  //Yes you need these '{}' don't delete
+            //Creating a 1 second Timer
+            try{
+               Thread.sleep(1000);//2000ms = 2s
+            }catch(InterruptedException ex){}  //Yes you need these '{}' don't delete
       //SIGNAL NEXT ROOM  
       }
 //==============================================Encounter 3=================================================================
@@ -160,10 +156,10 @@ public class Encounters {
             System.out.println("due to your incompetents in choosing a valid responce, you lose health.");//IS IT COOL LEAVING THIS?
             Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
          } 
-         //Creating a 1 second Timer
-         try{
-            Thread.sleep(1000);//2000ms = 2s
-         }catch(InterruptedException ex){}  //Yes you need these '{}' don't delete
+            //Creating a 1 second Timer
+            try{
+               Thread.sleep(1000);//2000ms = 2s
+            }catch(InterruptedException ex){}  //Yes you need these '{}' don't delete
       //SIGNAL NEXT ROOM  
       }
 //=================================================Encounter 4=============================================================
@@ -174,6 +170,8 @@ public class Encounters {
          System.out.println("(1) Magic, shine some light in this bitch");//CHANGE THIS BEFORE TURNING IN!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
          System.out.println("(0) Use Sanity!");
          
+         int choice = input.nextInt();
+         System.out.print("What is your choice?: ");
          
          if(choice ==1) {
             if(Battle.getMagicDmg() > xx) {
@@ -193,10 +191,33 @@ public class Encounters {
          else{
             System.out.println("Sanity? Really? Common. That doesn't exist in this game!");
          }
-      
-      
       }
-    
+//=================================================Encounter 5=============================================================
+      if(deciderEncounter ==5) {
+         System.out.println("a breeze chills the room. Before you, three men hang from frayed ropes. ");
+         System.out.println("They stare at you with cold, dead eyes. The trio swing silently, ");
+         Systme.out.println("then fade into dust that falls to the ground.");
+         //Choice Time
+         System.out.println("(1) Magic, Burn!!");
+         System.out.println("(0) "); //Something needs to go here. 
+         
+         int choice = input.nextInt();
+         System.out.print("What is your choice?: ");
+         
+            if(choice ==1) {
+            if(Battle.getMagicDmg() > xx) {
+               System.out.println("You say \"Yeah... No, Burn the entire thing\" with that, the enire room catches on fire. ");
+               System.out.println("");
+               //SINGAL NEXT ROOM
+            }
+            //Not finnished. yet. 
+            else {
+               System.out.println("Really? Nothing? Your soul must be mush to not react to that.");
+            }
+         }
+         else{
+            System.out.println("Sanity? Really? Common. That doesn't exist in this game!");
+         }
       
-   }//Encounter closer
+   }//Encounter class closer
 }//story closer
