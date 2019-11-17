@@ -4,7 +4,9 @@
 * Assignment: Magic
 ******************************************/
 public class Magic {
-
+   //Still a work in progress until I can see the rest of the
+   //groups code 11/16/2019
+   
    // Fields
    
    
