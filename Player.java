@@ -4,16 +4,25 @@
 **
 */
 /*********************************************/
-public class Player {
-
-   // Fields
+public class Player
+{
+   String name;
+   int health;
    
-   
-   // Constructors
-   
-   
-   //Methods
-
-
-
+   public void setName(String n)
+   {
+      name = n;
+   }
+   public String getName()
+   {
+      return name;
+   }
+   public void setHealth(int h)
+   {
+      health = h;
+   }
+   public int getHealth()
+   {
+      return health;
+   }
 }
