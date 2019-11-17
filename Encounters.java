@@ -1,29 +1,12 @@
 /*
 Michal Johnson
-Final Story Section
+Encounter Section
 */
 import java.util.Scanner;
 import java.util.Random;
 
 public class Encounters {
-   
-   public static void main(String[] args) {
-   
-      Stories();
-//       Scanner input = new Scanner(System.in);
-//       Random rand =  new Random();
-//       
-//       int decider = rand.nextInt(10);//random number to choose the stories
-//       
-//       if(decider <= 4) {
-//          Stories();
-//       }
-//       if(decider >= 5) {
-//          Encounter();
-//       }
-//       
-   }
-   
+      
    public static void Encounter() {
       Scanner input = new Scanner(System.in); //Find a way to not repeat these each bloody time. 
       Random rand =  new Random();
@@ -42,30 +25,30 @@ public class Encounters {
          System.out.print("What is your choice?: ");
          
          if(choice ==1) { //Giving choice to user to choose the outcome. 
-            if(Player.getMovementSpeed() > xx) {
+            if(Player.getMovementSpeed() > 1) {
                System.out.println("You were fast enough to break free!");
                
             }
             else {
                System.out.println("Oof... you arn't fast enough for that. Gotta take some health now.");
-               Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
+               //Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
             }
          }
        
          if(choice ==2) {
-            if(Battle.getMagicDmg() > xx) {
+            if(Battle.getMagicDmg() > 1) {
                System.out.println(" Kill them with HOLY FIRE! The webs burn");
                   
             }
             else {
                System.out.println("That feels bad, You're not good enough with your magic to do that. Gotta take some health now.");
-               Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
+              // Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
                
             }
          }
          else {
             System.out.println("due to your incompetents in choosing a valid responce, you lose health.");//IS IT COOL LEAVING THIS?
-            Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
+            //Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
          }
             //Creating a 1second Timer
             try{
@@ -86,29 +69,29 @@ public class Encounters {
          System.out.print("What is your choice?: ");
          
          if(choice==1) {
-            if(Player.getMovementSpeed() > xx) {
+            if(Player.getMovementSpeed() > 1) {
                System.out.println("You Run away screeming like a little girl. But! You get away");
                
             }
             else {
                System.out.println("Looks like you didn't make it. Sorry. Minus Hitpoints!");
-               Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
+               //Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
             }
          }
          
          if(choice==2) {
-            if(Player.getSwordDmg() > xx) {
+            if(Player.getSwordDmg() > 1) {
                System.out.println("You swing... and swing.... and swing... finally it dies");
                
             }
             else {
                System.out.println("Looks like you didn't make it. Sorry. Minus Hitpoints!");
-               Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
+               //Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
             }
          }
          else {
             System.out.println("due to your incompetents in choosing a valid responce, you lose health.");//IS IT COOL LEAVING THIS?
-            Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
+            //Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
          } 
             //Creating a 1 second Timer
             try{
@@ -129,32 +112,32 @@ public class Encounters {
          System.out.print("What is your choice?: ");
          
          if(choice==1) {
-            if(Battle.getMagicDmg() > xx) {
+            if(Battle.getMagicDmg() > 1) {
                System.out.println("You you successfully remove the curse! Next Room!");
-               / 
+               
             }
             else {
                System.out.println("Looks like you didn't make it. Sorry. Minus Hitpoints!");
-               Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
+               //Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
             }
          }
          if(choice==2) {
-            if(Player.getMovementSpeed() > xx) {
+            if(Player.getMovementSpeed() > 1) {
                System.out.println("You rush out of the room! Suddenly all the sound has returned... Freaky.");
                 
             }
             else {
                System.out.println("Looks like you didn't make it. Sorry. Minus Hitpoints!");
-               Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
+               //Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
             }
          }
          if(choice==3) {
             System.out.println("it’s so quiet you lose your sanity! Ohh Noo!!! -xx health");
-            Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
+            //Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
          }
          else {
             System.out.println("due to your incompetents in choosing a valid responce, you lose health.");//IS IT COOL LEAVING THIS?
-            Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
+            //Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
          } 
             //Creating a 1 second Timer
             try{
@@ -174,7 +157,7 @@ public class Encounters {
          System.out.print("What is your choice?: ");
          
          if(choice ==1) {
-            if(Battle.getMagicDmg() > xx) {
+            if(Battle.getMagicDmg() > 1) {
                System.out.println("light emerges from your chest. Go figure that's what would happen.");
                System.out.println("You Can See! You come to the conclusion you were just seeing things");
                //SINGAL NEXT ROOM
@@ -205,7 +188,7 @@ public class Encounters {
          System.out.print("What is your choice?: ");
          
             if(choice ==1) {
-            if(Battle.getMagicDmg() > xx) {
+            if(Battle.getMagicDmg() > 1) {
                System.out.println("You say \"Yeah... No, Burn the entire thing\" with that, the enire room catches on fire. ");
                System.out.println("");
                //SINGAL NEXT ROOM
@@ -220,4 +203,6 @@ public class Encounters {
          }
       
    }//Encounter class closer
-}//story closer
+
+}
+}
