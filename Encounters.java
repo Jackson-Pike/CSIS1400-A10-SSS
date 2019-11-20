@@ -25,7 +25,7 @@ public class Encounters {
          System.out.print("What is your choice?: ");
          
          if(choice ==1) { //Giving choice to user to choose the outcome. 
-            if(Player.getMovementSpeed() > 1) {
+            if(Player.getSpeed() > 1) {
                System.out.println("You were fast enough to break free!");
                
             }
@@ -69,7 +69,7 @@ public class Encounters {
          System.out.print("What is your choice?: ");
          
          if(choice==1) {
-            if(Player.getMovementSpeed() > 1) {
+            if(Player.getSpeed() > 1) {
                System.out.println("You Run away screeming like a little girl. But! You get away");
                
             }
@@ -122,7 +122,7 @@ public class Encounters {
             }
          }
          if(choice==2) {
-            if(Player.getMovementSpeed() > 1) {
+            if(Player.getSpeed() > 1) {
                System.out.println("You rush out of the room! Suddenly all the sound has returned... Freaky.");
                 
             }
