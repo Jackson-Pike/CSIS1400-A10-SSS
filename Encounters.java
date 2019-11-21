@@ -22,7 +22,7 @@ public class Encounters {
       Scanner input = new Scanner(System.in); //Find a way to not repeat these each bloody time. 
       Random rand =  new Random();
       
-      System.out.println("Story");
+      System.out.println("Encounter Time! ");
       int deciderEncounter = rand.nextInt(6);
 //=================================================First encounter===========================================================
       if(deciderEncounter == 0) {
