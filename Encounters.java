@@ -47,7 +47,7 @@ public class Encounters {
 //          }
        
          if(choice ==2) {
-            if(Battle.getMagicDmg() > 2) {
+            if(Player.getMagicDmg() > 2) {
                System.out.println(" Kill them with HOLY FIRE! The webs burn");
                   
             }
@@ -123,7 +123,7 @@ public class Encounters {
          System.out.print("What is your choice?: ");
          
          if(choice==1) {
-            if(Battle.getMagicDmg() > 2) {
+            if(Player.getMagicDmg() > 2) {
                System.out.println("You you successfully remove the curse! Next Room!");
                
             }
@@ -168,7 +168,7 @@ public class Encounters {
          System.out.print("What is your choice?: ");
          
          if(choice ==1) {
-            if(Battle.getMagicDmg() > 3) {
+            if(Player.getMagicDmg() > 3) {
                System.out.println("light emerges from your chest. Go figure that's what would happen.");
                System.out.println("You Can See! You come to the conclusion you were just seeing things");
                //SINGAL NEXT ROOM
@@ -199,7 +199,7 @@ public class Encounters {
          System.out.print("What is your choice?: ");
          
             if(choice ==1) {
-            if(Battle.getMagicDmg() > 2) {
+            if(Player.getMagicDmg() > 2) {
                System.out.println("You say \"Yeah... No, Burn the entire thing\" with that, the enire room catches on fire. ");
                System.out.println("");
                //SINGAL NEXT ROOM
