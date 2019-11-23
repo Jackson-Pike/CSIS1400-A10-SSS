@@ -1,97 +1,117 @@
 /********************************
-** A10 - Team Assignment - Main Application Class
-** Project Description: 
+** A10 - Team Assignment - Application
+** Author: Amrit, Austin
+** Class Description: contains main method, introduction (non-scenario) methods, and utility methods
 ********************************/
 
 import java.util.Scanner;
-public class GameApp
+import java.util.Random;
+
+public class Application
 {
    public static void main(String[] args)
    {
-      int destruction1, destruction2;
+     //methods
+     
+     
+     startScreen();
+     // for(int i = 0; i < 3; i++) {
+//      
+//      }
+     // Room myRoom = new Room();
+   }
+   
+   public static void startScreen() {
+      //variables
       Scanner input = new Scanner(System.in);
-      Player p1 = new Player();
-      p1.health = 10;
+      String name = "";
+      int playerClass = -1;
       
-      BadGuy p2 = new BadGuy();
-      p2.health = 10;
-      
-      Battle sword = new Battle();
-      sword.swordDmg = 0;
-      
-      Battle sword1 = new Battle();
-      sword1.swordDmg = 0;
-      
-      System.out.println("P1 set your name: ");
-      String p1Name = input.nextLine();
-      p1.setName(p1Name);
-      
-      System.out.println("P2 set your name: ");
-      String p2Name = input.nextLine();
-      p2.setName(p2Name);
-      
-      System.out.println(p1.getName() +" set your sword name: ");
-      String swordName = input.nextLine();
-      sword.setName(swordName);
-      
-      System.out.println(p2.getName() +" set your sword name: ");
-      String sword1Name = input.nextLine();
-      sword1.setName(sword1Name);
-      
-      
-      while(p1.health > 0 && p2.health > 0)
-      {
-         System.out.println(p1.getName() + " your health level is " +p1.health);
-         System.out.println(p1.getName() + " raise your health level");
-         
-         System.out.println(p2.getName() + " your health level is " +p2.health);
-         System.out.println(p2.getName() + " raise your health level");
-         
-         if(sword.swordDmg == 10 || sword1.swordDmg == 10)
-            break;
-          System.out.println(p1.getName() + " How much sword power you wanna use(less than 10)?");
-          destruction1 = input.nextInt();
-          sword.swordDmg = sword.swordDmg + destruction1;
-          
-          
-          System.out.println(p2.getName() + " How much sword power you wanna use(less than 10)?");
-          destruction2 = input.nextInt();
-          sword1.swordDmg = sword1.swordDmg + destruction2;
-          if(destruction1 > destruction2)
-          {
-            p2.health = p2.health - (destruction1 - destruction2); 
-            System.out.println(p2.getName() +" Health affected");
-            System.out.println(p1.getName() +" More sword damage than "+ p2.getName());
-            System.out.println(p1.getName() +" No Health affected");
-          }
-          else if(destruction2 > destruction1)
-          {
-            p1.health = p1.health - (destruction2 - destruction1);
-            System.out.println(p1.getName() +" Health affected");
-            System.out.println(p2.getName() +" More sword damage than "+ p1.getName());
-            System.out.println(p2.getName() +" No Health affected");
-          }
-          
-          else
-          {
-            System.out.println("Same destruction");
-          }
-          
-          
-          
-         // int p1NewHealth = input.nextInt();
-        //  p1.setHealth(p1NewHealth);
+      System.out.println();
+      GraphicsHandler.printGraphics(1);
+      transition(1000);
+      System.out.println("You, a soldier of fortune have been hired by a small Eastern Town to deal with a problem...");
+      System.out.println("The long dormant castle of the late lord has began to stir with life, but not of this world.");
+      System.out.println("Dark creatures from the castle have ventured into the down causing chaos and fear.");
+      System.out.println("You must clear the castle of those evil beasts!");
+      transition(5000);
+      System.out.println(":::::::::::::::::::::::::::::::::::::::::::::::::::::::");
+      System.out.println(":::::::::::::::::::::::::::::::::::::::::::::::::::::::");
+      System.out.println("::::::::::::::::::::::::::_:_:_:_|_::::::::::::::::::::");
+      System.out.println("::::::::::::::::::::::::::]-I-I-I-[::::::::::::::::::::");
+      System.out.println("::::::`      `::::::::::::\\_,_,_,_/::::::::::::::::::::");
+      System.out.println("::::/          \\:::::::::::|     |:::::::::::::::::::::");
+      System.out.println(":::::          ::::::::::::|  _  |:-_-_-_-:::::|II>::::");
+      System.out.println("::::\\          /:::-_-_-_-:| / \\ |:\\-.-.-/:::::I:::::::");
+      System.out.println("::::::._    _.:::::\\_,,_,/:| |_| |::|   |:::::/ \\::::::");
+      System.out.println("::::::::::::::::::::|   ]::|     |/\\|   |::::/___\\:::::");
+      System.out.println("::::::::::::::::::::[ []|::|     ,... /\\|:::::| |::::::");
+      System.out.println(":::::::::::|II>:::::|   |__|    u|::| |||::::_| |::::::");
+      System.out.println(":::::::::::I::::::::|[] ,--.  u  |::|   |::_- ,.:::::::");
+      System.out.println("::::::::::/ \\:::::::[   |::|u    |::|   |_-   |::::::::");
+      System.out.println(":::::::::/___\\::::|      |:|    _||||_   \\    |::::::::");
+      System.out.println("::::::::::| |:^:^:|      |/     - '' -          _\\:::::");
+      System.out.println(":::::::::::.,   ___          ,----' \\       _/]/:::::::");
+      System.out.println("::~:~:~:~~~::~~~~~~~:~~~~~~~:~~~~:~~~~:~~~~~:~~:~~::~::");
+      System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~::");
+      System.out.println("");
+      transition(2000);
+      while(name == "") {
+         System.out.println("What is your name traveler? ");
+         name = input.nextLine();
+         //Player.setName(name);
       }
-      System.out.println("Game over");
-      if(p1.health > 0 && sword.swordDmg < 10)
-      {
-         System.out.println(p1.getName() + " won");
+      
+      
+      do { //Checks if choice is an int between 0 and 3, the only options being 1 or 2
+         System.out.println("What profession do you specialize in " + name + "?");
+         System.out.println(" (1) Knight     (2) Wizard ");
+         playerClass = input.nextInt();
+      } while (!(playerClass > 0 && playerClass < 3));
+      
+      if(playerClass == 1) {
+         //knight
+         System.out.println("\n Ahh a brave knight, your armor will make you a much tougher foe.");
+         Player.setHealth(10);
+         Player.setMagic(1);
+      } else { 
+         //wizard
+         System.out.println("\nA wizard, a rare sight around these parts. Your magical ability might save you from some sticky situations.");
+         Player.setHealth(7);
+         Player.setMagic(4);
       }
-      else if(p2.health > 0 && sword1.swordDmg < 10)
-      {
-         System.out.println(p2.getName() + " won");
+      
+      System.out.println("Now that you have gathered yourself, it is now time to enter the castle. You enter the side maids entrance...");
+      transition(2000);
+   }
+   
+   public static void sleep(int milliseconds) {
+      try {
+          Thread.sleep(milliseconds);                 //1000 milliseconds is one second.
+      } catch(InterruptedException ex) {
+          Thread.currentThread().interrupt();
       }
-      else
-         System.out.println("game draw");
+   }
+   
+   public static void transition(int milliseconds) {
+      //sleep(milliseconds);
+      System.out.print("\n.");
+      //sleep(milliseconds);
+      System.out.print(".");
+     // sleep(milliseconds);
+      System.out.print(".\n");
+   }
+   
+   public static boolean probabilityCalculator(double chance) {
+      //use me to calculate probability, will return true if success, false if not.
+      //pass a double from 0 - 1. example: probabilityCalculator(0.25) 25% chance of success.
+      Random rand = new Random();
+      double r = rand.nextDouble();
+      if (r < chance) {
+         return true;
+      } else {
+         return false;
+      }
+   
    }
 }

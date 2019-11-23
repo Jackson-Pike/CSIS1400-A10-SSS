@@ -1,37 +1,61 @@
-/**********************************************/
-/*
-**
-**
-*/
-/*********************************************/
+/********************************
+** A10 - Team Assignment - Player
+** Author: Amrit, Austin
+** Class Description: contains data on user's player, static methods because there is only one player
+********************************/
 public class Player
 {
-   String name;
-   int health = 10;
-   int speed = 10; 
+   static String name;
+   static int health = 0; 
+   static int magic = 0; 
+   static double dmgModifier = 1.0;
+   static double defModifier = 1.0;
+  
    
-   public void setName(String n)
+   //name
+   public static void setName(String n)
    {
       name = n;
    }
-   public String getName()
+   public static String getName()
    {
       return name;
    }
-   public void setHealth(int h)
+   
+   //health
+   public static void setHealth(int playerHealth)
    {
-      health = h;
+      //to increase health put positive int for h, if decrease health pass negative num
+      health += playerHealth;
    }
-   public int getHealth()
+   public static int getHealth()
    {
       return health;
    }
-   public void setSpeed(int s)
+   
+   //magic
+   public static void setMagic(int m)
    {
-      speed = s;
+      magic += m;
    }
-   public int getSpeed()
+   public static int getMagic()
    {
-      return speed;
+      return magic;
+   }
+   
+   //damage modifier
+   public static void setDmgModifier(double dm) {
+      dmgModifier += dm;
+   }
+   public static double getDmgModifier() {
+      return dmgModifier;
+   }
+   
+   //defense modifier
+   public static void setDefModifier(double def) {
+      defModifier += def;
+   }
+   public static double getDefModifier() {
+      return defModifier;
    }
 }
