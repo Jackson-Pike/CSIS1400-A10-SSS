@@ -6,10 +6,11 @@
 public class Player
 {
    static String name;
-   static int health = 0; 
+   static int health = 1; 
    static int magic = 0; 
    static double dmgModifier = 1.0;
    static double defModifier = 1.0;
+   static boolean isAlive = true;
   
    
    //name
@@ -57,5 +58,13 @@ public class Player
    }
    public static double getDefModifier() {
       return defModifier;
+   }
+   
+   //player is alive
+   public static void setAlive(boolean b) {
+      isAlive = b;
+   }
+   public static boolean getAlive(){
+      return isAlive;
    }
 }

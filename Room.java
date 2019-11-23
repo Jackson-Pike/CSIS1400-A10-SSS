@@ -4,15 +4,19 @@
 ** Class Description: Handles room generation
 ********************************/
 import java.util.Random;
+import java.util.Arrays;
 public class Room {
 
    // Fields
-   Random rand = new Random();
-   String[] roomDescriptions = new String[5];
+   static Random rand = new Random();
+   static String[] roomDescriptions = new String[5];
+   static Battle[] battleInstances = new Battle[3];
    
    
    // Constructors
-   public Room() {
+   public static void generateRooms() {
+   //add for loop here for multiple rooms.
+      int i = 0;
       //room introduction section
       System.out.println("You enter to find...");
       roomDescriptions[0] = "A long hallway with a valuted ceiling sporting war memorobilia on each of the hallways walls.";
@@ -32,6 +36,7 @@ public class Room {
       }
       else { //battle 50%
          System.out.println("\nA foe appears before you!");
+         battleInstances[i] = new Battle();
       }
       
    }

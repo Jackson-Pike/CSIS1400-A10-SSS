@@ -15,10 +15,7 @@ public class Application
      
      
      startScreen();
-     // for(int i = 0; i < 3; i++) {
-//      
-//      }
-     // Room myRoom = new Room();
+     Room.generateRooms();
    }
    
    public static void startScreen() {
@@ -27,44 +24,30 @@ public class Application
       String name = "";
       int playerClass = -1;
       
+      //title sequence
       System.out.println();
       GraphicsHandler.printGraphics(1);
       transition(1000);
+      
+      //intro text and castle sprite
       System.out.println("You, a soldier of fortune have been hired by a small Eastern Town to deal with a problem...");
       System.out.println("The long dormant castle of the late lord has began to stir with life, but not of this world.");
       System.out.println("Dark creatures from the castle have ventured into the down causing chaos and fear.");
       System.out.println("You must clear the castle of those evil beasts!");
       transition(5000);
-      System.out.println(":::::::::::::::::::::::::::::::::::::::::::::::::::::::");
-      System.out.println(":::::::::::::::::::::::::::::::::::::::::::::::::::::::");
-      System.out.println("::::::::::::::::::::::::::_:_:_:_|_::::::::::::::::::::");
-      System.out.println("::::::::::::::::::::::::::]-I-I-I-[::::::::::::::::::::");
-      System.out.println("::::::`      `::::::::::::\\_,_,_,_/::::::::::::::::::::");
-      System.out.println("::::/          \\:::::::::::|     |:::::::::::::::::::::");
-      System.out.println(":::::          ::::::::::::|  _  |:-_-_-_-:::::|II>::::");
-      System.out.println("::::\\          /:::-_-_-_-:| / \\ |:\\-.-.-/:::::I:::::::");
-      System.out.println("::::::._    _.:::::\\_,,_,/:| |_| |::|   |:::::/ \\::::::");
-      System.out.println("::::::::::::::::::::|   ]::|     |/\\|   |::::/___\\:::::");
-      System.out.println("::::::::::::::::::::[ []|::|     ,... /\\|:::::| |::::::");
-      System.out.println(":::::::::::|II>:::::|   |__|    u|::| |||::::_| |::::::");
-      System.out.println(":::::::::::I::::::::|[] ,--.  u  |::|   |::_- ,.:::::::");
-      System.out.println("::::::::::/ \\:::::::[   |::|u    |::|   |_-   |::::::::");
-      System.out.println(":::::::::/___\\::::|      |:|    _||||_   \\    |::::::::");
-      System.out.println("::::::::::| |:^:^:|      |/     - '' -          _\\:::::");
-      System.out.println(":::::::::::.,   ___          ,----' \\       _/]/:::::::");
-      System.out.println("::~:~:~:~~~::~~~~~~~:~~~~~~~:~~~~:~~~~:~~~~~:~~:~~::~::");
-      System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~::");
-      System.out.println("");
+      GraphicsHandler.printGraphics(2);
       transition(2000);
+      
+      //get player name
       while(name == "") {
          System.out.println("What is your name traveler? ");
          name = input.nextLine();
-         //Player.setName(name);
+         Player.setName(name);
       }
       
-      
+      //get player class
       do { //Checks if choice is an int between 0 and 3, the only options being 1 or 2
-         System.out.println("What profession do you specialize in " + name + "?");
+         System.out.println("What profession do you specialize in " + Player.getName() + "?");
          System.out.println(" (1) Knight     (2) Wizard ");
          playerClass = input.nextInt();
       } while (!(playerClass > 0 && playerClass < 3));
@@ -94,11 +77,11 @@ public class Application
    }
    
    public static void transition(int milliseconds) {
-      //sleep(milliseconds);
+      sleep(milliseconds/2);
       System.out.print("\n.");
-      //sleep(milliseconds);
+      sleep(milliseconds/2);
       System.out.print(".");
-     // sleep(milliseconds);
+      sleep(milliseconds/2);
       System.out.print(".\n");
    }
    
