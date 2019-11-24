@@ -47,7 +47,7 @@ public class Encounters {
 //          }
        
          if(choice ==2) {
-            if(Player.getMagicDmg() > 2) {
+            if(Player.getMagic() > 2) {
                System.out.println(" Kill them with HOLY FIRE! The webs burn");
                   
             }
@@ -58,7 +58,7 @@ public class Encounters {
             }
          }
          else {
-            System.out.println("due to your incompetents in choosing a valid responce, you lose health.");//IS IT COOL LEAVING THIS?
+            System.out.println("due to your incompetents in choosing a valid responce, you lose health.");//IS IT COOL LEAVING THIS? nope.
             //Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
          }
             //Creating a 1second Timer
@@ -91,14 +91,14 @@ public class Encounters {
 //          }
          
          if(choice==2) {
-            if(Player.getSwordDmg() > 2) {
-               System.out.println("You swing... and swing.... and swing... finally it dies");
-               
-            }
-            else {
+            // if(Player.getSwordDmg() > 2) {
+//                System.out.println("You swing... and swing.... and swing... finally it dies");
+//                
+//             }
+           // else {
                System.out.println("Looks like you didn't make it. Sorry. Minus Hitpoints!");
                //Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
-            }
+           // }
          }
          else {
             System.out.println("due to your incompetents in choosing a valid responce, you lose health.");//IS IT COOL LEAVING THIS?
@@ -123,7 +123,7 @@ public class Encounters {
          System.out.print("What is your choice?: ");
          
          if(choice==1) {
-            if(Player.getMagicDmg() > 2) {
+            if(Player.getMagic() > 2) {
                System.out.println("You you successfully remove the curse! Next Room!");
                
             }
@@ -168,7 +168,7 @@ public class Encounters {
          System.out.print("What is your choice?: ");
          
          if(choice ==1) {
-            if(Player.getMagicDmg() > 3) {
+            if(Player.getMagic() > 3) {
                System.out.println("light emerges from your chest. Go figure that's what would happen.");
                System.out.println("You Can See! You come to the conclusion you were just seeing things");
                //SINGAL NEXT ROOM
@@ -190,7 +190,7 @@ public class Encounters {
       if(deciderEncounter ==5) {
          System.out.println("a breeze chills the room. Before you, three men hang from frayed ropes. ");
          System.out.println("They stare at you with cold, dead eyes. The trio swing silently, ");
-         Systme.out.println("then fade into dust that falls to the ground.");
+         System.out.println("then fade into dust that falls to the ground.");
          //Choice Time
          System.out.println("(1) Magic, Burn!! (Require magic 2)");
          System.out.println("(0) ");
@@ -199,7 +199,7 @@ public class Encounters {
          System.out.print("What is your choice?: ");
          
             if(choice ==1) {
-            if(Player.getMagicDmg() > 2) {
+            if(Player.getMagic() > 2) {
                System.out.println("You say \"Yeah... No, Burn the entire thing\" with that, the enire room catches on fire. ");
                System.out.println("");
                //SINGAL NEXT ROOM
