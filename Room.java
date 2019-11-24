@@ -32,7 +32,7 @@ public class Room {
          Chest.GenerateChest();
       } else if (Application.probabilityCalculator(0.50)) { //scenario 50% (if no chest)
         System.out.println("\nsomething happens");
-        //Encounters.Encounter();
+        Encounters.Encounter();
       }
       else { //battle 50%
          System.out.println("\nA foe appears before you!");
