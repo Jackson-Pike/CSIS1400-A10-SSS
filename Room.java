@@ -15,8 +15,7 @@ public class Room {
    
    // Constructors
    public static void generateRooms() {
-   //add for loop here for multiple rooms.
-      int i = 0;
+   for(int i = 0; i < 3; i++){
       //room introduction section
       System.out.println("You enter to find...");
       roomDescriptions[0] = "A long hallway with a valuted ceiling sporting war memorobilia on each of the hallways walls.";
@@ -38,7 +37,21 @@ public class Room {
          System.out.println("\nA foe appears before you!");
          battleInstances[i] = new Battle();
       }
-      
+      if(!Player.getAlive()){
+         break;
+      }
+   }
+   
+      if(!Player.getAlive()) {
+         GraphicsHandler.printGraphics(5);
+         System.out.println("Another hero has vanished in the halls of the manor...");
+      }else {
+         System.out.println("As you get to the top of the manor's spire you see a view of the valley you have saved...");
+         Application.transition(1000);
+         GraphicsHandler.printGraphics(8);
+         Application.transition(1000);
+         GraphicsHandler.printGraphics(9);
+      }
    }
    
    //Methods

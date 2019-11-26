@@ -91,6 +91,73 @@ public class GraphicsHandler
          }
       }
       
+      if(graphicsNum == 5) {
+         //Graphics 5: Tombstone
+         // -Used in Room.java on death
+         String[] deathSprite = new String[15];
+         deathSprite[0] = "        _.---,._,'";
+         deathSprite[1] = "       /' _.--.<";
+         deathSprite[2] = "         /'     `'";
+         deathSprite[3] = "       /' _.---._____";
+         deathSprite[4] = "       \\.'   ___, .-'`";
+         deathSprite[5] = "           /'    \\             .";
+         deathSprite[6] = "         /'       `-.          -|-";
+         deathSprite[7] = "        |                       |";
+         deathSprite[8] = "        |                   .-'~~~`-.";
+         deathSprite[9] = "        |                 .'         `.";
+         deathSprite[10] = "        |                 |  R  I  P  |";
+         deathSprite[11] = "        |                 |           |";
+         deathSprite[12] = "        |                 |           |";
+         deathSprite[13] = "         \\              \\\\|           |//";
+         deathSprite[14] = "   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^";
+         
+         for(String el:deathSprite) {
+            System.out.println(el);
+         }
+      }
+      
+      
+      
+      if(graphicsNum == 8) {
+         //Graphics 8: End Game View
+         // -Used in Room.java on victory
+         String[] endSprite = new String[16];
+         endSprite[0] = "                                  _";
+         endSprite[1] = "                        .-.      / \\        _";
+         endSprite[2] = "            ^^         /   \\    /^./\\__   _/ \\";
+         endSprite[3] = "          _        .--'\\/\\_ \\__/.      \\ /    \\  ^^  ___";
+         endSprite[4] = "         / \\_    _/ ^      \\/  __  :'   /\\/\\  /\\  __/   \\";
+         endSprite[5] = "        /    \\  /    .'   _/  /  \\   ^ /    \\/  \\/ .`'\\_/\\";
+         endSprite[6] = "       /\\/\\  /\\/ :' __  ^/  ^/    `--./.'  ^  `-.\\ _    _:\\ _";
+         endSprite[7] = "      /    \\/  \\  _/  \\-' __/.' ^ _   \\_   .'\\   _/ \\ .  __/ \\";
+         endSprite[8] = "    /\\  .-   `. \\/     \\ / -.   _/ \\ -. `_/   \\ /    `._/  ^  \\";
+         endSprite[9] = "   /  `-.__ ^   / .-'.--'    . /    `--./ .-'  `-.  `-. `.  -  `.";
+         endSprite[10] = " @/        `.  / /      `-.   /  .-'   / .   .'   \\    \\  \\  .-  \\%";
+         endSprite[11] = " @(88%@)@%% @)&@&(88&@.-_=_-=_-=_-=_-=_.8@% &@&&8(8%@%8)(8@%8 8%@)%";
+         endSprite[12] = " @88:::&(&8&&8::JGS:&`.~-_~~-~~_~-~_~-~~=.'@(&%::::%@8&8)::&#@8::::";
+         endSprite[13] = " `::::::8%@@%:::::@%&8:`.=~~-.~~-.~~=..~'8::::::::&@8:::::&8::::::'";
+         endSprite[14] = "  `::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'";
+         
+         for(String el:endSprite) {
+            System.out.println(el);
+         }
+      }
+      
+      if(graphicsNum == 9) {
+         //Graphics 9: End Credits
+         // -Used in Room.java on victory
+         String[] endCreditSprite = new String[16];
+         endCreditSprite[] = "*----------------------*";
+         endCreditSprite[] = "|        THE END       |";
+         endCreditSprite[] = "|  Created By: Austin  |";
+         endCreditSprite[] = "|              Amrit   |";
+         endCreditSprite[] = "|              Michal  |";
+         endCreditSprite[] = "|              Jackson |";
+         endCreditSprite[] = "|                      |";
+         endCreditSprite[] = "|  Graphics From:      |";
+         endCreditSprite[] = "|     asciiart.website |";
+         endCreditSprite[] = "|     asciiart.eu      |";
+         endCreditSprite[] = "*----------------------*";
       
    }
    
