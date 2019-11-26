@@ -29,8 +29,8 @@ public class Encounters {
          //Choose what option you would like to take. 
          System.out.println("(1) Magic! Burn the webs!");
          System.out.println("(0) Do nothing. Sucks for you.");
+         System.out.print("What is your choice?: ");           //Switched order of these lines
          int choice = input.nextInt();
-         System.out.print("What is your choice?: ");
          //User picks their choice, here are the differnt options. 
          //This is baised on probability rather than Characters skill
          if(choice ==1) {
@@ -61,9 +61,8 @@ public class Encounters {
          //Choose what option you would like to take. 
          System.out.println("(1) Use Sword to kill the slimy thing!");
          System.out.println("(0) Do nothing. Sucks for you.");
-         
-         int choice = input.nextInt();
          System.out.print("What is your choice?: ");
+         int choice = input.nextInt();
          //User picks their choice, here are the differnt options. 
          //This is baised on probability rather than Characters skill
          if(choice==1) {
@@ -96,9 +95,8 @@ public class Encounters {
             System.out.println("(1) Magic remove this wretched curse!");
             System.out.println("(2) Explore! Why not? What's the worst that can happen?");
             System.out.println("(0) Do nothing. Sucks for you.");
-            
-           int choice = input.nextInt();
             System.out.print("What is your choice?: ");
+            int choice = input.nextInt();
          //User picks their choice, here are the differnt options. 
          //This is baised on probability rather than Characters skill
             if(choice==1) {
@@ -128,9 +126,8 @@ public class Encounters {
             //Choose what option you would like to take. 
             System.out.println("(1) Magic, shine some light! (require magic 4");
             System.out.println("(0) Use Sanity!");
-            
+            System.out.print("What is your choice?: ");            
             int choice = input.nextInt();
-            System.out.print("What is your choice?: ");
          //User picks their choice, here are the differnt options. 
          //This is baised on probability rather than Characters skill
             if(choice ==1) {
@@ -164,9 +161,8 @@ public class Encounters {
             //Choose what option you would like to take. 
             System.out.println("(1) Magic, Burn!!");
             System.out.println("(0) ");
-            
+            System.out.print("What is your choice?: ");        
             int choice = input.nextInt();
-            System.out.print("What is your choice?: ");
          //User picks their choice, here are the differnt options. 
          //This is baised on probability rather than Characters skill
                if(choice ==1) {

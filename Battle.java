@@ -16,7 +16,7 @@ public class Battle
    static Scanner input = new Scanner(System.in);
    
    public Battle() {
-      //this.randomEnemy = rand.nextInt(3) + 1;
+      this.randomEnemy = rand.nextInt(2) + 1;
       
       if(randomEnemy == 1) { //vampire enemy
          System.out.println();
@@ -33,15 +33,14 @@ public class Battle
          this.enemyHealth = 5;
          enemyLines[0] = "The dragon blasts you with fire!";
          enemyLines[1] = "The dragon cuts you with the spikes on its tail!";
-         enemyLines[2] = "";
-      } else if (randomEnemy == 3) {
-      
-      }
-      
-      while(!this.encounterOver) {
+         enemyLines[2] = ""; //FIXME: Jackson Add third line
+      } //else if (randomEnemy == 3) {//FIXME: Add Third enemy
+      //
+      //}
+      while(!encounterOver) {
          //player turn
-         GraphicsHandler.printGraphics(6);
-         System.out.println(this.enemyHealth);
+         GraphicsHandler.printGraphics(3);
+         System.out.printf("Foe's Health: %d%n", this.enemyHealth);
          switch(input.nextInt()){
             case 1: 
                if(Application.probabilityCalculator(0.75)){

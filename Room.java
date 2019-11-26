@@ -30,7 +30,7 @@ public class Room {
          System.out.println("\nYou find a chest!");
          Chest.GenerateChest();
       } else if (Application.probabilityCalculator(0.50)) { //scenario 50% (if no chest)
-        System.out.println("\nsomething happens");
+        //System.out.println("\nsomething happens");        !!!!!!! FIXME this can be removed yes?
         Encounters.Encounter();
       }
       else { //battle 50%

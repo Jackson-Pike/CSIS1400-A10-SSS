@@ -90,7 +90,35 @@ public class GraphicsHandler
             System.out.println(el);
          }
       }
+      
+      if(graphicsNum == 5) {
+         //Graphics 5: Tombstone
+         // -Used in Room.java on death
+         String[] deathSprite = new String[15];
+         deathSprite[0] = "        _.---,._,'";
+         deathSprite[1] = "       /' _.--.<";
+         deathSprite[2] = "         /'     `'";
+         deathSprite[3] = "       /' _.---._____";
+         deathSprite[4] = "       \\.'   ___, .-'`";
+         deathSprite[5] = "           /'    \\             .";
+         deathSprite[6] = "         /'       `-.          -|-";
+         deathSprite[7] = "        |                       |";
+         deathSprite[8] = "        |                   .-'~~~`-.";
+         deathSprite[9] = "        |                 .'         `.";
+         deathSprite[10] = "        |                 |  R  I  P  |";
+         deathSprite[11] = "        |                 |           |";
+         deathSprite[12] = "        |                 |           |";
+         deathSprite[13] = "         \\              \\\\|           |//";
+         deathSprite[14] = "   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^";
+         
+         for(String el:deathSprite) {
+            System.out.println(el);
+         }
+      }
+      
       if(graphicsNum == 6) {
+         //Second Enemy: Dragon
+         //Used in Battle.java as enemy
          String[] dragonSprite = new String[20];
          dragonSprite[0] = "                                              _        _";
          dragonSprite[1] = "                                  _.-'/   _.:'`/";
@@ -118,39 +146,18 @@ public class GraphicsHandler
             System.out.println(el);
          }
       }
-         
       
-      if(graphicsNum == 5) {
-         //Graphics 5: Tombstone
-         // -Used in Room.java on death
-         String[] deathSprite = new String[15];
-         deathSprite[0] = "        _.---,._,'";
-         deathSprite[1] = "       /' _.--.<";
-         deathSprite[2] = "         /'     `'";
-         deathSprite[3] = "       /' _.---._____";
-         deathSprite[4] = "       \\.'   ___, .-'`";
-         deathSprite[5] = "           /'    \\             .";
-         deathSprite[6] = "         /'       `-.          -|-";
-         deathSprite[7] = "        |                       |";
-         deathSprite[8] = "        |                   .-'~~~`-.";
-         deathSprite[9] = "        |                 .'         `.";
-         deathSprite[10] = "        |                 |  R  I  P  |";
-         deathSprite[11] = "        |                 |           |";
-         deathSprite[12] = "        |                 |           |";
-         deathSprite[13] = "         \\              \\\\|           |//";
-         deathSprite[14] = "   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^";
-         
-         for(String el:deathSprite) {
-            System.out.println(el);
-         }
-      }
+      if(graphicsNum == 7) {
+      
+            //FIX ME: JACKSON [WIP]
       
       
+      }      
       
       if(graphicsNum == 8) {
          //Graphics 8: End Game View
          // -Used in Room.java on victory
-         String[] endSprite = new String[16];
+         String[] endSprite = new String[15];
          endSprite[0] = "                                  _";
          endSprite[1] = "                        .-.      / \\        _";
          endSprite[2] = "            ^^         /   \\    /^./\\__   _/ \\";
