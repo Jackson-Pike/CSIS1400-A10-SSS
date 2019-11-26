@@ -146,7 +146,7 @@ public class GraphicsHandler
       if(graphicsNum == 9) {
          //Graphics 9: End Credits
          // -Used in Room.java on victory
-         String[] endCreditSprite = new String[16];
+         String[] endCreditSprite = new String[11];
          endCreditSprite[0] = "*----------------------*";
          endCreditSprite[1] = "|        THE END       |";
          endCreditSprite[2] = "|  Created By: Austin  |";
@@ -164,4 +164,5 @@ public class GraphicsHandler
          }
    }
    
+}
 }
