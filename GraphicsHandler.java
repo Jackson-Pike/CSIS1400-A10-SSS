@@ -90,6 +90,35 @@ public class GraphicsHandler
             System.out.println(el);
          }
       }
+      if(graphicsNum == 6) {
+         String[] dragonSprite = new String[20];
+         dragonSprite[0] = "                                              _        _";
+         dragonSprite[1] = "                                  _.-'/   _.:'`/";
+         dragonSprite[2] = "                               ,'`   ( ,:;.-'`(";
+         dragonSprite[3] = "                             .'      .:'`      \\";
+         dragonSprite[4] = "                            /       //    _.-';)";
+         dragonSprite[5] = "                          _/      _//_.-;:-'``/";
+         dragonSprite[6] = "                   //|    \\      \\  .-'`      \\                                  ,";
+         dragonSprite[7] = "                  || /_,-,_|      | `\"\"--..__  \\                  .-'```'-.     )\\ ";
+         dragonSprite[8] = "             _.--'_  '-;_/_)_     |(``\"\"'---.;\\\"/-,.-.  _         /  .---.  \\  .'  \\";
+         dragonSprite[9] = "            /6    ^`     ':_/     | \\\"-._    .-'../__ )' ',.-. _ |  /     \\  ;/_  _/";
+         dragonSprite[10] ="           (`-----`--'.    \\_)    ;|`\\\"-.;-./        `\"\"--;.__) ',-.      (| |  ||";
+         dragonSprite[11] ="          __)         {\\   |_/\\   \\    _.'                  `\\\"-;_ )'-,_(`/ ;_.'/";
+         dragonSprite[12] ="           /         {=|   |)  \\.-\\\"\\  /                          `'-.;_:'  /_.'";
+         dragonSprite[13] ="                     {=|    \\_.'    )) '        /                          /";
+         dragonSprite[14] ="                     {=|     ,                 |      ,                _.-'";
+         dragonSprite[15] ="                      {=;     `\"\"--.            \\    '.       __,.---'`";
+         dragonSprite[16] ="                       {=\\          `\\           '._   '._.-\\\"`";
+         dragonSprite[17] ="                 _,.--\\\"`;{\\ '-.._    /        __,..-'-._ '.";
+         dragonSprite[18] ="                (((/==)/ _`;.--'\\\"` .'--\"\"\"\"```  .--\\\"```    )";
+         dragonSprite[19] ="                 ```  ' (((/====```            ((((/======'";
+         dragonSprite[15] ="                      ```                    ```";
+      
+         for(String el:dragonSprite) {
+            System.out.println(el);
+         }
+      }
+         
       
       if(graphicsNum == 5) {
          //Graphics 5: Tombstone
@@ -143,6 +172,8 @@ public class GraphicsHandler
          }
       }
       
+
+
       if(graphicsNum == 9) {
          //Graphics 9: End Credits
          // -Used in Room.java on victory
@@ -162,6 +193,7 @@ public class GraphicsHandler
          for(String el:endCreditSprite) {
             System.out.println(el);
          }
+
    }
    
 }

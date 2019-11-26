@@ -11,7 +11,7 @@ public class Battle
    Random rand = new Random();
    int enemyHealth;
    String[] enemyLines = new String[3];
-   int randomEnemy = 1;
+   int randomEnemy = 6;
    boolean encounterOver = false;
    static Scanner input = new Scanner(System.in);
    
@@ -27,14 +27,20 @@ public class Battle
          enemyLines[1] = "The vampire slashes you with a dagger!";
          enemyLines[2] = "The vampire summons bats to attack!";
       } else if (randomEnemy == 2) {
-      
+         System.out.println();
+         GraphicsHandler.printGraphics(6);
+         System.out.println("          A dragon appears!");
+         this.enemyHealth = 5;
+         enemyLines[0] = "The dragon blasts you with fire!";
+         enemyLines[1] = "The dragon cuts you with the spikes on its tail!";
+         enemyLines[2] = "";
       } else if (randomEnemy == 3) {
       
       }
       
       while(!this.encounterOver) {
          //player turn
-         GraphicsHandler.printGraphics(3);
+         GraphicsHandler.printGraphics(6);
          System.out.println(this.enemyHealth);
          switch(input.nextInt()){
             case 1: 
