@@ -54,7 +54,7 @@ public class Application
       
       if(playerClass == 1) {
          //knight
-         System.out.println("\n Ahh a brave knight, your armor will make you a much tougher foe.");
+         System.out.println("\nAhh a brave knight, your armor will make you a much tougher foe.");
          Player.setHealth(10);
          Player.setMagic(1);
       } else { 
