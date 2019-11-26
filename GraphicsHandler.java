@@ -147,18 +147,21 @@ public class GraphicsHandler
          //Graphics 9: End Credits
          // -Used in Room.java on victory
          String[] endCreditSprite = new String[16];
-         endCreditSprite[] = "*----------------------*";
-         endCreditSprite[] = "|        THE END       |";
-         endCreditSprite[] = "|  Created By: Austin  |";
-         endCreditSprite[] = "|              Amrit   |";
-         endCreditSprite[] = "|              Michal  |";
-         endCreditSprite[] = "|              Jackson |";
-         endCreditSprite[] = "|                      |";
-         endCreditSprite[] = "|  Graphics From:      |";
-         endCreditSprite[] = "|     asciiart.website |";
-         endCreditSprite[] = "|     asciiart.eu      |";
-         endCreditSprite[] = "*----------------------*";
+         endCreditSprite[0] = "*----------------------*";
+         endCreditSprite[1] = "|        THE END       |";
+         endCreditSprite[2] = "|  Created By: Austin  |";
+         endCreditSprite[3] = "|              Amrit   |";
+         endCreditSprite[4] = "|              Michal  |";
+         endCreditSprite[5] = "|              Jackson |";
+         endCreditSprite[6] = "|                      |";
+         endCreditSprite[7] = "|  Graphics From:      |";
+         endCreditSprite[8] = "|     asciiart.website |";
+         endCreditSprite[9] = "|     asciiart.eu      |";
+         endCreditSprite[10] = "*----------------------*";
       
+         for(String el:endCreditSprite) {
+            System.out.println(el);
+         }
    }
    
 }
