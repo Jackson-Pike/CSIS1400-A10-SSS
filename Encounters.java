@@ -63,9 +63,7 @@ public class Encounters {
             //Creating a 1second Timer
             try{
                Thread.sleep(1000);//2000ms = 2s
-            }catch(InterruptedException ex){} 
-         
-      Room.generateRooms();//Should start the next room. 
+            }catch(InterruptedException ex){}  
       }
 //==================================================Encounter 2====================================================================
       if(deciderEncounter == 1) {
@@ -107,7 +105,6 @@ public class Encounters {
             try{
                Thread.sleep(1000);//2000ms = 2s
             }catch(InterruptedException ex){}  //Yes you need these '{}' don't delete
-      Room.generateRooms();
       }
 //==============================================Encounter 3=================================================================
     if(deciderEncounter == 3) {
@@ -153,7 +150,6 @@ public class Encounters {
             try{
                Thread.sleep(1000);//2000ms = 2s
             }catch(InterruptedException ex){}  //Yes you need these '{}' don't delete
-      Room.generateRooms();  
       }
 //=================================================Encounter 4=============================================================
       if(deciderEncounter ==4) {
@@ -184,7 +180,6 @@ public class Encounters {
          else{
             System.out.println("Sanity? Really? Common. That doesn't exist in this game!");
          }
-      Room.generateRooms();
       }
 //=================================================Encounter 5=============================================================
       if(deciderEncounter ==5) {
@@ -208,8 +203,7 @@ public class Encounters {
             else {
                System.out.println("Really? Nothing? Your soul must be mush to not react to that.");
             }
-         }
-   Room.generateRooms();   
+         }   
    }//Encounter class closer
 
 }
