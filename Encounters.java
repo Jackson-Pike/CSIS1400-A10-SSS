@@ -19,8 +19,7 @@ public class Encounters {
       Scanner input = new Scanner(System.in); //Find a way to not repeat these each bloody time. 
       Random rand =  new Random();
       
-      System.out.println("Encounter Time! ");
-      int deciderEncounter = rand.nextInt(6);
+      int deciderEncounter = rand.nextInt(5);
       
 //=================================================First encounter===========================================================
       if(deciderEncounter == 0) {
@@ -90,7 +89,7 @@ public class Encounters {
             }catch(InterruptedException ex){}
       }
 //==============================================Encounter 3=================================================================
-       if(deciderEncounter == 3) {
+       if(deciderEncounter == 2) {
             System.out.println("Silence. Underground, everything goes silent. Even the sound of breathing has vanished.");
             //Choose what option you would like to take.  
             System.out.println("(1) Magic remove this wretched curse!");
@@ -122,7 +121,7 @@ public class Encounters {
                }catch(InterruptedException ex){} 
          }
 //=================================================Encounter 4=============================================================
-         if(deciderEncounter ==4) {
+         if(deciderEncounter ==3) {
             System.out.println("The walls of this room are damp with blood. The blood drips from the ceiling, down the walls,");
             System.out.println("over the furniture, and onto your shoes. In a blink, it is gone.");
             //Choose what option you would like to take. 
@@ -157,7 +156,7 @@ public class Encounters {
             }
          }
 //=================================================Encounter 5=============================================================
-         if(deciderEncounter ==5) {
+         if(deciderEncounter ==4) {
             System.out.println("A breeze chills the room. Before you, three men hang from frayed ropes. ");
             System.out.println("They stare at you with cold, dead eyes. The trio swing silently, ");
             System.out.println("then fade into dust that falls to the ground.");
