@@ -64,9 +64,9 @@ public class Encounters {
             //Creating a 1second Timer
             try{
                Thread.sleep(1000);//2000ms = 2s
-            }catch(InterruptedException ex){}  //Yes you need these '{}' don't delete
+            }catch(InterruptedException ex){} 
          
-      //SIGNAL NEXT ROOM  
+      Room.generateRooms();//Should start the next room. 
       }
 //==================================================Encounter 2====================================================================
       if(deciderEncounter == 1) {
@@ -108,7 +108,7 @@ public class Encounters {
             try{
                Thread.sleep(1000);//2000ms = 2s
             }catch(InterruptedException ex){}  //Yes you need these '{}' don't delete
-      //SIGNAL NEXT ROOM  
+      Room.generateRooms();
       }
 //==============================================Encounter 3=================================================================
     if(deciderEncounter == 3) {
@@ -154,7 +154,7 @@ public class Encounters {
             try{
                Thread.sleep(1000);//2000ms = 2s
             }catch(InterruptedException ex){}  //Yes you need these '{}' don't delete
-      //SIGNAL NEXT ROOM  
+      Room.generateRooms();  
       }
 //=================================================Encounter 4=============================================================
       if(deciderEncounter ==4) {
@@ -171,7 +171,7 @@ public class Encounters {
             if(Player.getMagic() > 3) {
                System.out.println("light emerges from your chest. Go figure that's what would happen.");
                System.out.println("You Can See! You come to the conclusion you were just seeing things");
-               //SINGAL NEXT ROOM
+               
             }
             else {
                System.out.println("Your chest glows slightly....");
@@ -185,6 +185,7 @@ public class Encounters {
          else{
             System.out.println("Sanity? Really? Common. That doesn't exist in this game!");
          }
+      Room.generateRooms();
       }
 //=================================================Encounter 5=============================================================
       if(deciderEncounter ==5) {
@@ -209,7 +210,7 @@ public class Encounters {
                System.out.println("Really? Nothing? Your soul must be mush to not react to that.");
             }
          }
-      
+   Room.generateRooms();   
    }//Encounter class closer
 
 }
