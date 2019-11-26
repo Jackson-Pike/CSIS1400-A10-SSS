@@ -45,7 +45,6 @@ public class Encounters {
 //                //Player.setPlayerHealth(Player.getPlayerHealth()xx); //Taking heath from player. 
 //             }
 //          }
-       
          if(choice ==2) {
             if(Player.getMagic() > 2) {
                System.out.println(" Kill them with HOLY FIRE! The webs burn");
