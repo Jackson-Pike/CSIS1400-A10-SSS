@@ -8,11 +8,6 @@ import sun.audio.AudioStream;
 
 public class PlayMusic
 {
-   public static void main(String[] args)
-   {
-      playMusic("C:\\Users\\Owner\\Downloads\\Game of Thrones.wav");
-   }
-   
    public static void playMusic(String FilePath)
    {
       
