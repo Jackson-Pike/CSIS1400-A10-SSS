@@ -25,7 +25,7 @@ public class Encounters {
       if(deciderEncounter == 0) {
          System.out.println("Webs!  Casually, you reach up to brush away some webs...");
          System.out.println("But they wont brush away! They cling to you!"); 
-         System.out.println("");
+         Application.transition(1000);
          //Choose what option you would like to take. 
          System.out.println("(1) Magic! Burn the webs!");
          System.out.println("(0) Do nothing. Sucks for you.");
@@ -58,7 +58,7 @@ public class Encounters {
 //==================================================Encounter 2====================================================================
       if(deciderEncounter == 1) {
          System.out.println("Something Slimy? What is around your ankle? A bug? A tentacle? A dead hand crawling!");
-         System.out.println("");
+         Application.transition(1000);
          //Choose what option you would like to take. 
          System.out.println("(1) Use Sword to kill the slimy thing!");
          System.out.println("(0) Do nothing. Sucks for you.");
@@ -72,7 +72,7 @@ public class Encounters {
          if(choice==1) {
          
             if(Application.probabilityCalculator(0.80)) {
-               System.out.println("You swing... and swing.... and swing... finally it dies");   
+               System.out.print("You swing... and swing.... and swing... finally it dies");   
             }
             
             else{
@@ -94,7 +94,7 @@ public class Encounters {
 //==============================================Encounter 3=================================================================
        if(deciderEncounter == 2) {
             System.out.println("Silence. Underground, everything goes silent. Even the sound of breathing has vanished.");
-            System.out.println("");
+            Application.transition(1000);
             //Choose what option you would like to take.  
             System.out.println("(1) Magic remove this wretched curse!");
             System.out.println("(2) Explore! Why not? What is the worst that can happen?");
@@ -121,14 +121,14 @@ public class Encounters {
                System.out.println("Nothing is found. Nothing is here. It is just quite. ");
             }
                
-            Application.transition(1000);
-            System.out.println(""); 
+            // Application.transition(1000);
+//             System.out.println(""); 
          }
 //=================================================Encounter 4=============================================================
          if(deciderEncounter ==3) {
             System.out.println("The walls of this room are damp with blood. The blood drips from the ceiling, down the walls,");
             System.out.println("over the furniture, and onto your shoes. In a blink, it is gone.");
-            System.out.println("");
+            Application.transition(1000);
             //Choose what option you would like to take. 
             System.out.println("(1) Magic, shine some light! (require magic 4");
             System.out.println("(0) Use Sanity!");
