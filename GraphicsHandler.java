@@ -202,11 +202,30 @@ public class GraphicsHandler {
          case 8:
             //Graphics 8: _____ Enemy
             // -Used in Battle.java when this enemy is triggered
-         
-               //FIXME: JACKSON [WIP]
-         
+            String[] demonSprite = new String[16];
+            demonSprite[0] = "             (                      )";
+            demonSprite[1] = "             |\\    _,--------._    / |";
+            demonSprite[2] = "             | `.,'            `. /  |";
+            demonSprite[3] = "             `  '              ,-'   '";
+            demonSprite[4] = "              \\/_         _   (     /";
+            demonSprite[5] = "             (,-.`.    ,',-.`. `__,'";
+            demonSprite[6] = "              |/#\\ ),-','#\\`= ,'.` |";
+            demonSprite[7] = "              `._/)  -'.\\_,'   ) ))|";
+            demonSprite[8] = "              /  (_.)\\     .   -'//";
+            demonSprite[9] = "             (  /\\____/\\    ) )`'\\";
+            demonSprite[10] = "             \\ |V----V||  ' ,    \\";
+            demonSprite[11] = "              |`- -- -'   ,'   \\  \\      _____";
+            demonSprite[12] = "       ___    |         .'    \\ \\  `._,-'     `-";
+            demonSprite[13] = "          `.__,`---^---'       \\ ` -'";
+            demonSprite[14] = "             -.______  \\ . /  ______,-";
+            demonSprite[15] = "                     `.     ,'            ap";
+            
+            for(String el:demonSprite) {
+               System.out.println(el);
+            }
+            
             break;    
-      
+            
          
    
          }

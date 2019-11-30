@@ -41,7 +41,14 @@ public class Battle
             enemyLines[2] = "The dragon claws and slashes at you!"; //FIXME: Jackson Add third line
             break;
          case 3:
-            //FIXME Add Third Enemy
+            System.out.println();
+            GraphicsHandler.printGraphics(8);
+            System.out.printf("%-13s%n", "It's a DEMON!");
+            Application.transition(500);
+            this.enemyHealth = 5;
+            enemyLines[0] = "The demon takes a piece of your soul!";
+            enemyLines[1] = "The demon summons flames and burns you!";
+            enemyLines[2] = "The demon unleashes his hell-hound on you!";
             break;
       }
             
