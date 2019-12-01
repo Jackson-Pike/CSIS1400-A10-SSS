@@ -9,6 +9,7 @@ import java.util.Random;
 public class Chest {
    //Fields
    static Random rand = new Random();
+   static Scanner input = new Scanner(System.in);
    
    //Methods
    public static void GenerateChest() {
@@ -41,6 +42,9 @@ public class Chest {
                      break;
                      
                }
+               
+               System.out.println("Click any button to continue...");
+               input.nextLine();
             
           
       }
