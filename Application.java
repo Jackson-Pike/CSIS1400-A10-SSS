@@ -26,7 +26,6 @@ public class Application
       
       //title sequence
       MusicHandler.playMusic("Fantascape.wav");
-      transition(1500);
       GraphicsHandler.printGraphics(1);
       transition(1000);
       
@@ -79,11 +78,11 @@ public class Application
    }
    
    public static void transition(int milliseconds) {
-      sleep(milliseconds/2);
+      sleep(milliseconds);
       System.out.print(".");
-      sleep(milliseconds/2);
+      sleep(milliseconds);
       System.out.print(".");
-      sleep(milliseconds/2);
+      sleep(milliseconds);
       System.out.print(".\n");
    }
    

@@ -27,7 +27,7 @@ public class Encounters {
          System.out.println("But they wont brush away! They cling to you!"); 
          Application.transition(1000);
          //Choose what option you would like to take. 
-         System.out.println("(1) Magic! Burn the webs!");
+         System.out.println("(1) Use magic to burn the webs.");
          System.out.println("(0) Do nothing. Sucks for you.");
          
          System.out.print("What is your choice?: ");
@@ -36,23 +36,23 @@ public class Encounters {
          //User picks their choice, here are the differnt options. 
          //This is baised on probability rather than Characters skill
          if(choice ==1) {
-            if(Application.probabilityCalculator(0.75)) {
-               System.out.println(" Kill them with HOLY FIRE! The webs burn");    
+            if(Player.getMagic() >= 4) {
+               System.out.println("You use your spells to burn the webs.\n");    
             }
             
             else {
-               System.out.println("Luck is not on your side. You fight and fight till you finally get out."); 
-               System.out.println("But you have to loose some health. Sorry bud");     
+               System.out.println("With your inexperience in magic you accidentally burn yourself."); 
                //Removing player health here. 
                Player.setHealth(-1);
-               System.out.printf("New Health: %d",Player.getHealth());        
+               System.out.printf("New Health: %d%n",Player.getHealth());        
             }
          }
          //Fall back option. Just going to start the next room. 
          else {
-            System.out.println("Well. I guess we start the next room now.");
+            System.out.println("Your hesitation causes you to trip and fall taking damage!");
+            Player.setHealth(-1);
          }
-         Application.transition(1000); //Timer till next thing starts 
+         Application.transition(500); //Timer till next thing starts 
          System.out.println("");
       }
 //==================================================Encounter 2====================================================================
@@ -72,12 +72,12 @@ public class Encounters {
          if(choice==1) {
          
             if(Application.probabilityCalculator(0.80)) {
-               System.out.print("You swing... and swing.... and swing... finally it dies");   
+               System.out.print("You swing... and swing.... and swing... finally it dies. \n");   
             }
             
             else{
                System.out.println("Swing! Swing the sword! But it does not die. Whatever this is, it is not affected!");
-               System.out.println("Run away! To the next room!");
+               System.out.println("Run away! To the next room!\n");
             }
          }
          //Fall back, backup option. 
@@ -85,7 +85,7 @@ public class Encounters {
             System.out.println("Looks like the thing still lives. You run away to avoid having it touch you again.");
             System.out.println("As you are running you hit your your toe on the door. Ouch!");     
             Player.setHealth(-1);
-            System.out.printf("New Health: %d",Player.getHealth());   
+            System.out.printf("New Health: %d%n",Player.getHealth());   
          }
     
          Application.transition(1000);
@@ -108,30 +108,28 @@ public class Encounters {
             if(choice==1) {
             
                if(Application.probabilityCalculator(0.60)) {
-                  System.out.println("You you successfully remove the curse! Next Room!"); 
+                  System.out.println("You you successfully remove the curse! You move to the next room.\n"); 
                }
                else {
                   System.out.println("The curse is messing with your head! Your memories! Thoughts!");
-                  System.out.println("Sumbling around the room, trying to get your berrings you are able to find the door.");     
+                  System.out.println("Sumbling around the room, trying to get your berrings you are able to find the door.\n");     
                }
             }
             
             if(choice==2) {
-               System.out.println("it’s so quiet you lose your sanity!");
-               System.out.println("Nothing is found. Nothing is here. It is just quite. ");
+               System.out.println("it's so quiet you lose your sanity!");
+               System.out.println("Nothing is found. Nothing is here. It is just quite. \n");
             }
-               
-            // Application.transition(1000);
-//             System.out.println(""); 
+       
          }
 //=================================================Encounter 4=============================================================
          if(deciderEncounter ==3) {
-            System.out.println("The walls of this room are damp with blood. The blood drips from the ceiling, down the walls,");
-            System.out.println("over the furniture, and onto your shoes. In a blink, it is gone.");
-            Application.transition(1000);
+            System.out.println("The walls of this room hold horrid sights of flesh and other worlds.");
+            System.out.println("Suddenly, a breeze puts out the candles and plunges the room into darkness.");
+            Application.transition(500);
             //Choose what option you would like to take. 
-            System.out.println("(1) Magic, shine some light! (require magic 4");
-            System.out.println("(0) Use Sanity!");
+            System.out.println("(1) Use a spell to cast light upon the room (4 Magic Required).");
+            System.out.println("(0) Navigate the room within the dark.");
             
             System.out.print("What is your choice?: ");
             int choice = input.nextInt();
@@ -139,39 +137,36 @@ public class Encounters {
          //User picks their choice, here are the differnt options. 
          //This is baised on probability rather than Characters skill
             if(choice ==1) {
-               if(Application.probabilityCalculator(0.85)) {
-                  System.out.println("light emerges from your chest. Go figure that is what would happen.");
-                  System.out.println("You Can See! You come to the conclusion you were just seeing things");
+               if(Player.getMagic() >= 4) {
+                  System.out.println("A ball of light emerges from your hands lighting up the room.");
+                  System.out.println("You Can See! You come to the conclusion you were just seeing things.\n");
                }
                
                else {
-                  System.out.println("Your chest glows slightly....Creepy");
-                  System.out.println("looking down at your chest you realize that you did not create \"light\" like you thought"); 
-                  System.out.println("You lit yourself on fire!");    
+                  System.out.println("Your inexperience in magic forces you to go without, you run through the room.");
+                  System.out.println("The trauma reduces your life force.\n");  
                   Player.setHealth(-1);
-                  try{ //Creating 1 second Timer
-                     Thread.sleep(1000);//2000ms = 2s
-                  }catch(InterruptedException ex){}
+                  Application.transition(500);  
                   System.out.printf("New Health: %d",Player.getHealth());  
                      
 
                }
             }
             else{
-               System.out.println("Sanity? Really? Common. That does not exist in this game!");
-               System.out.println("I guess that is it. next room");
+               System.out.println("The sounds you hear and the things you feel terrify you as your stubmle into the next room.");
+               System.out.println("The trauma reduces your life force.\n");  
+               Player.setHealth(-1);
             }
             Application.transition(1000);
             System.out.println("");
          }
 //=================================================Encounter 5=============================================================
          if(deciderEncounter ==4) {
-            System.out.println("A breeze chills the room. Before you, three men hang from frayed ropes. ");
-            System.out.println("They stare at you with cold, dead eyes. The trio swing silently, ");
-            System.out.println("then fade into dust that falls to the ground.");
+            System.out.println("A breeze chills the room. Before you, three enchanted skeletons hang from ropes clawing at you.");
+            System.out.println("This disturbing sight sends chills down your spine.");
             System.out.println("");
             //Choose what option you would like to take. 
-            System.out.println("(1) Magic, Burn!!");
+            System.out.println("(1) Use magic to burn the skeletons.");
             System.out.println("(0) Nothing. Leave it.");
             
             System.out.print("What is your choice?: ");
@@ -183,15 +178,14 @@ public class Encounters {
                if(choice ==1) {
                
                   if(Application.probabilityCalculator(0.65)) {
-                     System.out.println("You say \"Yeah... No, Burn the entire thing\" with that, the enire room catches on fire. ");
-                     System.out.println("");
+                     System.out.println("You say \"Yeah... No, Burn the entire thing\" with that, the enire room catches on fire. \n");
                   }
                   else {
-                     System.out.println("Being too frightened to burn the room you run out screaming. ");
+                     System.out.println("You try to burn the skeletons but the fright gets to you, so you run.\n");
                   }
                }//closing if choice == 1
             else {
-               System.out.println("Really? Nothing? Your heart and soul must be mush to not react to that.");
+               System.out.println("Really? Nothing? Your heart and soul must be mush to not react to that.\n");
             }
          Application.transition(1000);   
          System.out.println("");   

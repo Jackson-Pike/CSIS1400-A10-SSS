@@ -6,10 +6,10 @@
 public class Player
 {
    static String name;
-   static int health = 1; 
+   static int health = 0; 
    static int magic = 0; 
-   static double dmgModifier = 1.0;
-   static double defModifier = 1.0;
+   static double dmgModifier = 0.75;
+   static double defModifier = 0.0;
    static boolean isAlive = true;
   
    

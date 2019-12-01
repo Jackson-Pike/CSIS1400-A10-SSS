@@ -10,12 +10,12 @@ public class Room {
    // Fields
    static Random rand = new Random();
    static String[] roomDescriptions = new String[5];
-   static Battle[] battleInstances = new Battle[3];
+   static Battle[] battleInstances = new Battle[5];
    
    
    // Constructors
    public static void generateRooms() {
-   for(int i = 0; i < 3; i++){
+   for(int i = 0; i < 4; i++){
       //room introduction section
       System.out.println("You progress to the next room and find...");
       roomDescriptions[0] = "A long hallway with a valuted ceiling sporting war memorobilia on each of the hallways walls.";

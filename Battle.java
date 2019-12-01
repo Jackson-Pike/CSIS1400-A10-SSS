@@ -16,7 +16,7 @@ public class Battle
    static Scanner input = new Scanner(System.in);
    
    public Battle() {
-      this.randomEnemy = rand.nextInt(2) + 1;
+      this.randomEnemy = rand.nextInt(3) + 1;
       switch(randomEnemy){
       
          case 1:
@@ -24,7 +24,7 @@ public class Battle
             GraphicsHandler.printGraphics(6);
             System.out.printf("%-13s%n", "It's a vampire!");
             Application.transition(500);
-            this.enemyHealth = 5;
+            this.enemyHealth = 3;
             enemyLines[0] = "The vampire bites you with its fangs!";
             enemyLines[1] = "The vampire slashes you with a dagger!";
             enemyLines[2] = "The vampire summons bats to attack!";
@@ -45,7 +45,7 @@ public class Battle
             GraphicsHandler.printGraphics(8);
             System.out.printf("%-13s%n", "It's a DEMON!");
             Application.transition(500);
-            this.enemyHealth = 5;
+            this.enemyHealth = 4;
             enemyLines[0] = "The demon takes a piece of your soul!";
             enemyLines[1] = "The demon summons flames and burns you!";
             enemyLines[2] = "The demon unleashes his hell-hound on you!";
@@ -54,11 +54,11 @@ public class Battle
             
       while(!encounterOver) {
          //player turn
-         GraphicsHandler.printStats(enemyHealth);
+         GraphicsHandler.printStats(this.enemyHealth);
          System.out.printf("What is your choice?: ");
          switch(input.nextInt()){
             case 1: 
-               if(Application.probabilityCalculator(0.75)){
+               if(Application.probabilityCalculator(Player.getDmgModifier())){
                   System.out.println("You hit the foul beast!");
                   this.enemyHealth -= 2;
                   if(enemyHealth <= 0) {
@@ -88,7 +88,7 @@ public class Battle
          //monster turn
          if(this.enemyHealth > 0) {
             
-            if(Application.probabilityCalculator(0.75)){
+            if(Application.probabilityCalculator(0.75 - Player.getDefModifier())){
                   System.out.println(this.enemyLines[rand.nextInt(3)]);
                   Application.transition(250);
                   Player.setHealth(-2);

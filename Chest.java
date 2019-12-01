@@ -9,10 +9,7 @@ import java.util.Random;
 public class Chest {
    //Fields
    static Random rand = new Random();
-<<<<<<< HEAD
    static Scanner input = new Scanner(System.in);
-=======
->>>>>>> parent of 0bb2c17... added PlayMusic.java
    
    //Methods
    public static void GenerateChest() {
@@ -32,26 +29,21 @@ public class Chest {
                   case 2:
                      //Damage modifier
                      System.out.println("You find a potion that increases your strength!");
-                     Player.setDmgModifier(0.25);
+                     Player.setDmgModifier(0.05);
                      System.out.println(Player.getName() + "'s new dmgModifier: " + Player.getDmgModifier() + "\n");
                      break;
                   case 3:
                      //Defense modifier
                      System.out.println("You find a royal chestplate, this will help you live through this!");
-                     Player.setDefModifier(0.25);
+                     Player.setDefModifier(0.05);
                      System.out.println(Player.getName() + "'s new defModifier: " + Player.getDefModifier() + "\n");
                      break;
                   default:
                      break;
                      
                }
-<<<<<<< HEAD
                
-               System.out.println("Click any button to continue...");
+               System.out.println("Click enter to continue...");
                input.nextLine();
-=======
->>>>>>> parent of 0bb2c17... added PlayMusic.java
-            
-          
       }
 }
