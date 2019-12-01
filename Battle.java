@@ -11,31 +11,51 @@ public class Battle
    Random rand = new Random();
    int enemyHealth;
    String[] enemyLines = new String[3];
-   int randomEnemy = 1;
+   int randomEnemy;
    boolean encounterOver = false;
    static Scanner input = new Scanner(System.in);
    
    public Battle() {
-      //this.randomEnemy = rand.nextInt(3) + 1;
+      this.randomEnemy = rand.nextInt(2) + 1;
+      switch(randomEnemy){
       
-      if(randomEnemy == 1) { //vampire enemy
-         System.out.println();
-         GraphicsHandler.printGraphics(4);
-         System.out.println("           A vampire appears!");
-         this.enemyHealth = 5;
-         enemyLines[0] = "The vampire bites you with its fangs!";
-         enemyLines[1] = "The vampire slashes you with a dagger!";
-         enemyLines[2] = "The vampire summons bats to attack!";
-      } else if (randomEnemy == 2) {
-      
-      } else if (randomEnemy == 3) {
-      
+         case 1:
+            System.out.println();
+            GraphicsHandler.printGraphics(6);
+            System.out.printf("%-13s%n", "It's a vampire!");
+            Application.transition(500);
+            this.enemyHealth = 5;
+            enemyLines[0] = "The vampire bites you with its fangs!";
+            enemyLines[1] = "The vampire slashes you with a dagger!";
+            enemyLines[2] = "The vampire summons bats to attack!";
+            break;
+            
+         case 2:
+            System.out.println();
+            GraphicsHandler.printGraphics(7);
+            System.out.printf("%-13s%n", "It's a DRAGON!");
+            Application.transition(500);
+            this.enemyHealth = 5;
+            enemyLines[0] = "The dragon blasts you with fire!";
+            enemyLines[1] = "The dragon cuts you with the spikes on its tail!";
+            enemyLines[2] = "The dragon claws and slashes at you!"; //FIXME: Jackson Add third line
+            break;
+         case 3:
+            System.out.println();
+            GraphicsHandler.printGraphics(8);
+            System.out.printf("%-13s%n", "It's a DEMON!");
+            Application.transition(500);
+            this.enemyHealth = 5;
+            enemyLines[0] = "The demon takes a piece of your soul!";
+            enemyLines[1] = "The demon summons flames and burns you!";
+            enemyLines[2] = "The demon unleashes his hell-hound on you!";
+            break;
       }
-      
-      while(!this.encounterOver) {
+            
+      while(!encounterOver) {
          //player turn
-         GraphicsHandler.printGraphics(3);
-         System.out.println(this.enemyHealth);
+         GraphicsHandler.printStats(enemyHealth);
+         System.out.printf("What is your choice?: ");
          switch(input.nextInt()){
             case 1: 
                if(Application.probabilityCalculator(0.75)){
@@ -43,11 +63,12 @@ public class Battle
                   this.enemyHealth -= 2;
                   if(enemyHealth <= 0) {
                      this.encounterOver = true;
+                     System.out.printf("The beast has been conquered! You survive to live another day!%n");
                      break;
-                     }
                   }
-                else {
-                  System.out.println("You swing and miss");
+                  
+               } else {
+                  System.out.println("You swing and miss!");
                }
                break;
             case 2:
@@ -63,12 +84,13 @@ public class Battle
             default: 
                System.out.println("You don't do much of anything!");
          }
-         
+         Application.transition(250);
          //monster turn
          if(this.enemyHealth > 0) {
             
             if(Application.probabilityCalculator(0.75)){
                   System.out.println(this.enemyLines[rand.nextInt(3)]);
+                  Application.transition(250);
                   Player.setHealth(-2);
                   if(Player.getHealth() <= 0) {
                      this.encounterOver = true;
@@ -76,7 +98,8 @@ public class Battle
                      break;
                      }
             } else {
-               System.out.println("The monster lunges at you but misses!");
+               System.out.println("The monster lunges at you, but misses!");
+               Application.transition(250);
             }
 
          }

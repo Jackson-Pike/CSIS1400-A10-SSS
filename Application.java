@@ -13,7 +13,6 @@ public class Application
    {
      //methods
      
-     
      startScreen();
      Room.generateRooms();
    }
@@ -25,14 +24,15 @@ public class Application
       int playerClass = -1;
       
       //title sequence
-      System.out.println();
+      MusicHandler.playMusic("Fantascape.wav");
+      transition(1500);
       GraphicsHandler.printGraphics(1);
       transition(1000);
       
       //intro text and castle sprite
       System.out.println("You, a soldier of fortune have been hired by a small Eastern Town to deal with a problem...");
       System.out.println("The long dormant castle of the late lord has began to stir with life, but not of this world.");
-      System.out.println("Dark creatures from the castle have ventured into the down causing chaos and fear.");
+      System.out.println("Dark creatures from the castle have ventured into the town causing chaos and fear.");
       System.out.println("You must clear the castle of those evil beasts!");
       transition(5000);
       GraphicsHandler.printGraphics(2);
@@ -49,6 +49,7 @@ public class Application
       do { //Checks if choice is an int between 0 and 3, the only options being 1 or 2
          System.out.println("What profession do you specialize in " + Player.getName() + "?");
          System.out.println(" (1) Knight     (2) Wizard ");
+         System.out.printf("Your choice: ");
          playerClass = input.nextInt();
       } while (!(playerClass > 0 && playerClass < 3));
       
@@ -78,7 +79,7 @@ public class Application
    
    public static void transition(int milliseconds) {
       sleep(milliseconds/2);
-      System.out.print("\n.");
+      System.out.print(".");
       sleep(milliseconds/2);
       System.out.print(".");
       sleep(milliseconds/2);
