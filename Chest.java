@@ -9,7 +9,10 @@ import java.util.Random;
 public class Chest {
    //Fields
    static Random rand = new Random();
+<<<<<<< HEAD
    static Scanner input = new Scanner(System.in);
+=======
+>>>>>>> parent of 0bb2c17... added PlayMusic.java
    
    //Methods
    public static void GenerateChest() {
@@ -42,9 +45,12 @@ public class Chest {
                      break;
                      
                }
+<<<<<<< HEAD
                
                System.out.println("Click any button to continue...");
                input.nextLine();
+=======
+>>>>>>> parent of 0bb2c17... added PlayMusic.java
             
           
       }
